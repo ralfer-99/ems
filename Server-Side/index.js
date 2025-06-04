@@ -27,7 +27,7 @@ const verifyUser = (req, res, next) => {
             next()
         })
     } else {
-        return res.json({Status: false, Error: "Not autheticated"})
+        return res.json({Status: false, Error: "Not authenticated"})
     }
 }
 app.get('/verify',verifyUser, (req, res)=> {
